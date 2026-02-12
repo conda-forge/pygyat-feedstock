@@ -13,7 +13,7 @@ source:
 
 build:
   script: python -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -31,7 +31,7 @@ tests:
       imports:
         - pygyat
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version: ${{ python_min }}.*
   - script:
       content: |
         pygyat --version
